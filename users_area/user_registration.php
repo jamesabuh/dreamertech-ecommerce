@@ -88,7 +88,7 @@
         $user_ip=getIPAddress();
 
 
-        $select_query="Select * from `user_table` where username='$user_username' or user_email='$user_email";
+        $select_query="Select * from `user_table` where username='$user_username' or user_email='$user_email'";
         $result=mysqli_query($con,$select_query);
         $rows_count=mysqli_num_rows($result);
         if($rows_count>0){
@@ -106,16 +106,18 @@
             $sql_excute=mysqli_query($con,$insert_query);
         }
 
-        $select_cart_items="Select * from `cart_details` where ip_address'$user_ip'";
+        $select_cart_items="Select * from `cart_details` where ip_address='$user_ip'";
         $result_cart=mysqli_query($con,$select_cart_items);
         $rows_count=mysqli_num_rows($result_cart);
         if($rows_count>0){
             $_SESSION['username']=$user_username;
-            echo "<script>alert('You have items in your cart')</script>";
-            echo "<script>window.open('checkout.php','_self')</script>";
-        }else{
-            echo "<script>window.open('../index.php','_self')";
-        }
+            echo  "<script>alert('You have items in your cart')</script>";
+            echo   "<script>window.open('checkout.php','_self')</script>";
+            }else{
+            
+            echo  "<script>alert('registration successful')</script>";
+            echo   "<script>window.open('index.php','_self')</script>";
+            }
          
    }
 

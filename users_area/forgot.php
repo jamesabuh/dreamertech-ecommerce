@@ -81,7 +81,7 @@ require "mail.php";
         mysqli_query($con,$query);
 
         //   send_mail($email, 'Password reset', "Your code is" . $code);
-            send_mail($email, 'website', 'website', "Your code is", $code);
+            send_mail($email, 'Password reset', "Your code is" . $code);
        }
 
        function save_password($password){
