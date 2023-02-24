@@ -1,32 +1,20 @@
 name: Deploy website on push
 
-
 on:
-
   push:
     branches:
-      - main
-    
-    
+      - main 
 jobs:
-      
   web-deploy:
-      name: Deploy
-      
-      
-      runs-on: ubuntu-latest
-      
-      
+    name: Deploy
+    runs-on: ubuntu-latest 
       steps: 
       - name: Get latest code
-      
-      
       uses: actions/checkout@v2
-      
       - name: Sync files
       uses: Samkirkland/FTP-Deploy-Action@4.1.0
       with:
       server: ftp.dreamer.com.ng
-      username: ${{secrets.JAMES}}
-      password: ${{secrets.j0a8m0e2s9a7b7u7h}}
+      username: ${{secrets.USERNAME}}
+      password: ${{secrets.PASSWORD}}
       server-dir: /
