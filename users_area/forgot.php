@@ -4,7 +4,7 @@ session_start();
 $error = array();
 
 
-require "mail.php";
+
 
        $mode = "enter_email";
        if(isset($_GET['mode'])){

@@ -15,8 +15,8 @@ function send_mail($recipient,$subject,$message)
 
     $mail->SMTPDebug = 0;
     $mail->SMTPAuth  = TRUE;
-    $mail->SMTPSecure = "tls";
-    $mail->Port       =  587;
+    $mail->SMTPSecure = "ssl";
+    $mail->Port       =  465;
  //   $mail->Host       = "smtp.gmail.com";
  $mail->Host       = "smtp.mail.yahoo.com";
     $mail->Username   = "michealjames12311@yahoo.com";
