@@ -17,14 +17,14 @@ function send_mail($recipient,$subject,$message)
     $mail->SMTPAuth  = TRUE;
     $mail->SMTPSecure = "ssl";
     $mail->Port       =  465;
- //   $mail->Host       = "smtp.gmail.com";
- $mail->Host       = "smtp.mail.yahoo.com";
-    $mail->Username   = "michealjames12311@yahoo.com";
-    $mail->Password   = "mtn66666";
+    $mail->Host       = "smtp.mail.dreamer.com.ng";
+// $mail->Host       = "smtp.mail.yahoo.com";
+    $mail->Username   = "info@dreamer.com.ng";
+    $mail->Password   = "0j8a0m2e9s";
 
     $mail->IsHTML(true);
     $mail->AddAddress($recipient, "Dear-value-customer");
-    $mail->SetFrom("michealjames12311@yahoo.com", "My website");   
+    $mail->SetFrom("info@dreamer.com.ng", "My website");   
      $mail->Subject = $subject;
     $content = $message;
 
