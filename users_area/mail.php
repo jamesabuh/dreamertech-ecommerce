@@ -17,7 +17,7 @@ function send_mail($recipient,$subject,$message)
     $mail->SMTPAuth  = TRUE;
     $mail->SMTPSecure = "tls";
     $mail->Port       =  465;
-    $mail->Host       = "smtp.mail.dreamer.com.ng";
+    $mail->Host       = "mail.dreamer.com.ng";
 // $mail->Host       = "smtp.mail.yahoo.com";
     $mail->Username   = "info@dreamer.com.ng";
     $mail->Password   = "0j8a0m2e9s";
