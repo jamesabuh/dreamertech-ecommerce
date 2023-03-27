@@ -16,15 +16,15 @@ function send_mail($recipient,$subject,$message)
     $mail->SMTPDebug = 0;
     $mail->SMTPAuth  = FALSE;
     $mail->SMTPSecure = "tls";
-    $mail->Port       =  465;
-    $mail->Host       = "localhost";
+    $mail->Port       =  587;
+    $mail->Host       = "relay.sendinblue.com";
 // $mail->Host       = "smtp.mail.yahoo.com";
-    $mail->Username   = "info@dreamer.com.ng";
-    $mail->Password   = "0j8a0m2e9s";
+    $mail->Username   = "dreamertech6@gmail.com";
+    $mail->Password   = "02KV5BJCjvAnd8PX";
 
     $mail->IsHTML(true);
     $mail->AddAddress($recipient, "Dear-value-customer");
-    $mail->SetFrom("info@dreamer.com.ng", "My website");   
+    $mail->SetFrom("dreamertech6@gmail.com", "My website");   
      $mail->Subject = $subject;
     $content = $message;
 
